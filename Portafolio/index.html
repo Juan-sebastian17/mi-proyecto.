@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+        integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
+  <title>NATIVA | Productos Naturales</title>
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <header>
+    <nav id="navbar">
+      <div class="container">
+        <h1 class="logo">
+          <a href="index.html">NATIVA</a>
+        </h1>
+        <ul id="main-nav" class="txt-btn">
+          <li><a class="current" href="index.html">Productos</a></li>
+          <li><a href="contact.html">Nosotros</a></li>
+          <!-- Enlace del Carrito con Contador -->
+          <li class="cart-icon-container">
+            <a href="#" id="cart-btn">
+              <i class="fas fa-shopping-bag cart-icon"></i> Carrito
+              <span id="cart-count" class="cart-badge">0</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- SHOWCASE CON IMAGEN DE FONDO Y TEXTO CENTRADO -->
+    <div id="showcase-home">
+      <div class="showcase-banner">
+        <h1 class="subpage">NATIVA</h1>
+        <p class="large">Lo natural que necesitas, directamente de nuestra tierra</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- PRODUCTOS (3 EN FILA) -->
+  <section id="portfolio">
+    <div class="container">
+      <div class="portfolio-nav">
+        <ul class="txt-btn">
+          <li><a href="#">Todos</a></li>
+          <li><a href="#">Granolas</a></li>
+          <li><a href="#">Miel</a></li>
+          <li><a href="#">Infusiones</a></li>
+          <li><a href="#">Semillas</a></li>
+          <li><a href="#">Frutos secos</a></li>
+        </ul>
+      </div>
+
+      <!-- Fila 1 -->
+      <div class="portfolio-content">
+        <div class="box">
+          <a href="portfolio-1.html"><img src="img/portfolio/1-green.png" alt="Granola Natural"></a>
+          <h3>Granola Natural</h3>
+          <p style="font-weight: bold; color: var(--forest-green); margin: 5px 0;">$15.000</p>
+          <button class="btn btn-cart" onclick="addToCart('Granola Natural', 15.000)">Añadir al carrito</button>
+        </div>
+        <div class="box">
+          <a href="portfolio-2.html"><img src="img/portfolio/2-blue.png" alt="Miel de Abeja"></a>
+          <h3>Miel de Abeja</h3>
+          <p style="font-weight: bold; color: var(--forest-green); margin: 5px 0;">$10.000</p>
+          <button class="btn btn-cart" onclick="addToCart('Miel de Abeja', 10.000)">Añadir al carrito</button>
+        </div>
+        <div class="box">
+          <a href="portfolio-3.html"><img src="img/portfolio/3-green.png" alt="Infusión Relajante"></a>
+          <h3>Infusión Relajante</h3>
+          <p style="font-weight: bold; color: var(--forest-green); margin: 5px 0;">$12.000</p>
+          <button class="btn btn-cart" onclick="addToCart('Infusión Relajante', 12.000)">Añadir al carrito</button>
+        </div>
+      </div>
+
+      <!-- Fila 2 -->
+      <div class="portfolio-content">
+        <div class="box">
+          <a href="portfolio-4.html"><img src="img/portfolio/c.png" alt="Semillas Naturales"></a>
+          <h3>Semillas Naturales</h3>
+          <p style="font-weight: bold; color: var(--forest-green); margin: 5px 0;">$10.000</p>
+          <button class="btn btn-cart" onclick="addToCart('Semillas Naturales', 10.000)">Añadir al carrito</button>
+        </div>
+        <div class="box">
+          <a href="portfolio-5.html"><img src="img/portfolio/5-green.png" alt="Mix de Frutos Secos"></a>
+          <h3>Mix de Frutos Secos</h3>
+          <p style="font-weight: bold; color: var(--forest-green); margin: 5px 0;">$14.000</p>
+          <button class="btn btn-cart" onclick="addToCart('Mix de Frutos Secos', 14.000)">Añadir al carrito</button>
+        </div>
+        <div class="box">
+          <a href="portfolio-6.html"><img src="img/portfolio/6-purple.png" alt="Tisana de Hierbas"></a>
+          <h3>Tisana de Hierbas</h3>
+          <p style="font-weight: bold; color: var(--forest-green); margin: 5px 0;">$13.000</p>
+          <button class="btn btn-cart" onclick="addToCart('Tisana de Hierbas', 13.000)">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- PIE DE PÁGINA -->
+  <footer id="main-footer">
+    <div class="container">
+      <p class="small">NATIVA © 2026 - Productos naturales</p>
+      <ul>
+        <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- PANEL LATERAL DEL CARRITO (DRAWER) -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <h3>Tu Carrito NATIVA</h3>
+      <button class="close-cart" id="close-cart">&times;</button>
+    </div>
+    <div class="cart-body" id="cart-items-container">
+      <p style="text-align: center; color: #770;">Tu carrito está vacío</p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total:</span>
+        <span id="cart-total-price">$0.00</span>
+      </div>
+      <button class="btn btn-checkout" onclick="alert('¡Gracias por tu compra en NATIVA!')">Finalizar Compra</button>
+    </div>
+  </div>
+
+  <!-- SCRIPT DE INTERACCIÓN DEL CARRITO -->
+  <script>
+    const cartBtn = document.getElementById('cart-btn');
+    const cartDrawer = document.getElementById('cart-drawer');
+    const cartOverlay = document.getElementById('cart-overlay');
+    const closeCart = document.getElementById('close-cart');
+    const cartCount = document.getElementById('cart-count');
+    const cartItemsContainer = document.getElementById('cart-items-container');
+    const cartTotalPrice = document.getElementById('cart-total-price');
+
+    let cart = JSON.parse(localStorage.getItem('nativa_cart')) || [];
+
+    function updateCartUI() {
+      cartItemsContainer.innerHTML = '';
+      let total = 0;
+      let totalCount = 0;
+
+      if (cart.length === 0) {
+        cartItemsContainer.innerHTML = '<p style="text-align: center; color: #770;">Tu carrito está vacío</p>';
+      } else {
+        cart.forEach((item, index) => {
+          total += item.price * item.quantity;
+          totalCount += item.quantity;
+
+          const div = document.createElement('div');
+          div.classList.add('cart-item');
+          div.innerHTML = `
+            <div class="cart-item-info">
+              <h4>${item.name}</h4>
+              <p>$${item.price.toFixed(2)} x ${item.quantity}</p>
+            </div>
+            <button class="remove-item" onclick="removeItem(${index})"><i class="fas fa-trash"></i></button>
+          `;
+          cartItemsContainer.appendChild(div);
+        });
+      }
+
+      if(cartCount) cartCount.textContent = totalCount;
+      if(cartTotalPrice) cartTotalPrice.textContent = `$${total.toFixed(2)}`;
+      localStorage.setItem('nativa_cart', JSON.stringify(cart));
+    }
+
+    window.addToCart = function(name, price) {
+      const existingItem = cart.find(item => item.name === name);
+      if (existingItem) {
+        existingItem.quantity += 1;
+      } else {
+        cart.push({ name, price, quantity: 1 });
+      }
+
+      updateCartUI();
+      if(cartDrawer && cartOverlay) {
+        cartDrawer.classList.add('open');
+        cartOverlay.classList.add('active');
+      }
+    }
+
+    window.removeItem = function(index) {
+      cart.splice(index, 1);
+      updateCartUI();
+    }
+
+    if(cartBtn) {
+      cartBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        cartDrawer.classList.add('open');
+        cartOverlay.classList.add('active');
+      });
+    }
+
+    if(closeCart) {
+      closeCart.addEventListener('click', () => {
+        cartDrawer.classList.remove('open');
+        cartOverlay.classList.remove('active');
+      });
+    }
+
+    if(cartOverlay) {
+      cartOverlay.addEventListener('click', () => {
+        cartDrawer.classList.remove('open');
+        cartOverlay.classList.remove('active');
+      });
+    }
+
+    updateCartUI();
+  </script>
+
+</body>
+</html>

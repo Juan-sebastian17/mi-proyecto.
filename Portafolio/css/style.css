@@ -1,0 +1,478 @@
+/* =========================================================
+   VARIABLES Y ESTILOS GENERALES
+   ========================================================= */
+:root {
+  --forest-green: #2C4A3E;
+  --natural-green: #526E65;
+  --secondary-color: #F4F1EA;
+  --accent-color: #C86D51;
+  --text-color: #333333;
+  --white: #FFFFFF;
+  --border-color: #E0DCD0;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  color: var(--text-color);
+  background-color: var(--secondary-color);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 85%;
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* =========================================================
+   NAVEGACIÓN Y ENCABEZADO
+   ========================================================= */
+#navbar {
+  background: var(--white);
+  color: var(--forest-green);
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+#navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#navbar .logo a {
+  color: var(--forest-green);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+#navbar ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+#navbar ul li a {
+  color: var(--forest-green);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Icono del carrito en el menú */
+#navbar .cart-icon-container {
+  position: relative;
+}
+
+#navbar .cart-icon {
+  color: var(--forest-green);
+  font-size: 1.1em;
+}
+
+#navbar .cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: var(--accent-color);
+  color: var(--white);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+/* =========================================================
+   SHOWCASE (CABECERA DE PÁGINAS)
+   ========================================================= */
+#showcase {
+  background: var(--forest-green);
+  color: var(--white);
+  padding: 40px 0;
+  text-align: center;
+}
+
+#showcase .subpage {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+#showcase .large {
+  font-size: 1.2em;
+  color: var(--secondary-color);
+}
+
+/* =========================================================
+   PORTAFOLIO / PRODUCTOS (PÁGINA PRINCIPAL - 3 EN FILA)
+   ========================================================= */
+#portfolio {
+  padding: 40px 0;
+}
+
+#portfolio .portfolio-nav {
+  margin-bottom: 30px;
+}
+
+#portfolio .portfolio-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+#portfolio .portfolio-nav ul li a {
+  text-decoration: none;
+  color: var(--forest-green);
+  font-weight: 600;
+}
+
+#portfolio .portfolio-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+#portfolio .box {
+  flex: 1;
+  min-width: 280px;
+  background: var(--white);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+#portfolio .box img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+}
+
+#portfolio .box h3 {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-size: 1.1em;
+  color: var(--forest-green);
+}
+
+/* =========================================================
+   DETALLE DE PRODUCTOS (SINGLE PROJECT)
+   ========================================================= */
+.single-project {
+  padding: 50px 0;
+  background-color: var(--secondary-color);
+}
+
+.single-project .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.single-project .box-portfolio {
+  flex: 1;
+  min-width: 300px;
+  background: var(--white);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+}
+
+.single-project .box-portfolio img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.single-project .box-portfolio h4 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: var(--forest-green);
+  font-size: 1.3em;
+}
+
+.single-project .box-portfolio p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+.single-project .box-portfolio ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.single-project .box-portfolio ul li {
+  margin-bottom: 10px;
+  color: var(--natural-green);
+}
+
+/* Botones dentro del detalle */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+}
+
+.btn-light {
+  background-color: var(--secondary-color);
+  color: var(--forest-green);
+  border: 1px solid var(--border-color);
+}
+
+.btn-light:hover {
+  background-color: var(--border-color);
+}
+
+.btn-cart {
+  background-color: var(--accent-color);
+  color: var(--white);
+  width: 100%;
+  margin-top: 15px;
+}
+
+.btn-cart:hover {
+  background-color: var(--forest-green);
+}
+
+/* Navegación inferior de proyectos */
+.single-project-btn {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.single-project-btn .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.single-project-btn .hr-small,
+.single-project-btn .hr-small-2 {
+  display: none;
+}
+
+/* =========================================================
+   CARRITO DE COMPRAS (PANEL LATERAL / DRAWER)
+   ========================================================= */
+.cart-drawer {
+  position: fixed;
+  top: 0;
+  right: -350px;
+  width: 350px;
+  height: 100%;
+  background-color: var(--white);
+  box-shadow: -4px 0 15px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease-in-out;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-drawer.open {
+  right: 0;
+}
+
+.cart-header {
+  background-color: var(--forest-green);
+  color: var(--white);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-header h3 {
+  color: var(--white);
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.close-cart {
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.cart-body {
+  padding: 20px;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.cart-item-info h4 {
+  font-size: 14px;
+  color: var(--text-color);
+  margin: 0 0 5px 0;
+}
+
+.cart-item-info p {
+  font-size: 13px;
+  color: var(--natural-green);
+  margin: 0;
+}
+
+.remove-item {
+  color: var(--accent-color);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.cart-footer {
+  padding: 20px;
+  background-color: var(--secondary-color);
+  border-top: 1px solid var(--border-color);
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  color: var(--forest-green);
+}
+
+.btn-checkout {
+  width: 100%;
+  background-color: var(--natural-green);
+  color: var(--white);
+}
+
+.btn-checkout:hover {
+  background-color: var(--forest-green);
+}
+
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 999;
+}
+
+.cart-overlay.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* =========================================================
+   PIE DE PÁGINA (FOOTER)
+   ========================================================= */
+#main-footer {
+  background: var(--forest-green);
+  color: var(--white);
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+#main-footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#main-footer ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+#main-footer ul li a {
+  color: var(--white);
+  font-size: 1.1em;
+}
+/* =========================================================
+   CENTRAR TEXTO EN EL SHOWCASE
+   ========================================================= */
+#showcase-home,
+#showcase {
+  text-align: center;
+}
+
+.showcase-banner {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.showcase-banner h1,
+.showcase-banner p {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* =========================================================
+   IMAGEN DE FONDO DETRÁS DEL TEXTO (SHOWCASE)
+   ========================================================= */
+
+#showcase-home,
+#showcase {
+  background: linear-gradient(rgba(44, 74, 62, 0.7), rgba(44, 74, 62, 0.7)), url('../img/home.jpg') no-repeat center center/cover;
+  color: var(--white);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.showcase-banner {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.showcase-banner h1,
+.showcase-banner p {
+  text-align: center;
+  color: var(--white);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.showcase-banner .large {
+  color: var(--secondary-color);
+}
